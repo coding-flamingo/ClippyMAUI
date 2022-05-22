@@ -1,7 +1,25 @@
 ﻿@page "/"
+@using BlazorClippy
+<h1>Clippy App</h1>
 
-<h1>Hello, world!</h1>
+<EditForm Model="@clippyText" >
+    <InputText style="width:100%" id="name" @bind-Value="clippyText" placeholder="Enter Clippy Text" />
+</EditForm>
+<button style="margin-top:30px" class="btn btn-primary" onclick="@SpeakAsync">Speak</button>
+@code
+{
+    [Inject] ClippyService clippy { get; set; }
+    private string clippyText = string.Empty;
+    protected override async Task OnInitializedAsync()
+    {
+        await clippy.Load();
+    }
 
-Welcome to your new app.
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+    private async Task SpeakAsync()
+    {
+        await clippy.Speak(clippyText);
+    }
+
+
+}

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components.WebView.Maui;
 using ClippyMAUI.Data;
-
+using BlazorClippy;
 namespace ClippyMAUI;
 
 public static class MauiProgram
@@ -18,7 +18,7 @@ public static class MauiProgram
 
 		builder.Services.AddBlazorWebView();
 		builder.Services.AddSingleton<WeatherForecastService>();
-
+		builder.Services.AddScoped<ClippyService>();
 		return builder.Build();
 	}
 }

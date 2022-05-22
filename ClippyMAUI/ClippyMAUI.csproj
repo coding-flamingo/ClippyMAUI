@@ -34,10 +34,7 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon
-			Include="Resources\appicon.svg"
-			ForegroundFile="Resources\appiconfg.svg"
-			Color="#512BD4" />
+		<MauiIcon Include="Resources\appicon.svg" ForegroundFile="Resources\appiconfg.svg" Color="#512BD4" />
 
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\appiconfg.svg" Color="#512BD4" BaseSize="128,128" />
@@ -66,6 +63,12 @@
 
 	<ItemGroup>
 		<Content Remove="Properties\launchSettings.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="BlazorClippy" Version="0.1.0" />
+	  <PackageReference Include="Microsoft.Graphics.Win2D" Version="1.0.3.1" />
+	  <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.3" />
 	</ItemGroup>
 
 </Project>
