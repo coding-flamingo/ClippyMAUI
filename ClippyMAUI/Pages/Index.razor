@@ -3,9 +3,12 @@
 <h1>Clippy App</h1>
 
 <EditForm Model="@clippyText" >
-    <InputText style="width:100%" id="name" @bind-Value="clippyText" placeholder="Enter Clippy Text" />
+    <InputText style="width:100%" 
+    id="name" @bind-Value="clippyText" 
+    placeholder="Enter Clippy Text" />
 </EditForm>
-<button style="margin-top:30px" class="btn btn-primary" onclick="@SpeakAsync">Speak</button>
+<button style="margin-top:30px" 
+class="btn btn-primary" onclick="@SpeakAsync">Speak</button>
 @code
 {
     [Inject] ClippyService clippy { get; set; }
