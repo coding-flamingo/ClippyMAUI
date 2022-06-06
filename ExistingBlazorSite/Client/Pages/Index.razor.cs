@@ -8,13 +8,12 @@ namespace ExistingBlazorSite.Client.Pages
         HttpClient _httpClient { get; set; }
         private string? _magicalQuote;
 
-        protected override async Task OnInitializedAsync()
+        protected override void OnInitialized()
         {
-            await GetStringFromServerAsync();
+            _magicalQuote = "Hello MAUI Fest!";
         }
         private async Task GetStringFromServerAsync(bool randy= false)
         {
-            _magicalQuote = "Getting magical quote from magical server";
             _magicalQuote = await _httpClient.GetStringAsync("/api/Clippy");
         }
     }

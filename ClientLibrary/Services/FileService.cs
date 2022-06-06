@@ -9,7 +9,7 @@ namespace ClientLibrary.Services;
 public static class FileService
 {
 
-    public static string WriteToFile(string path, string content, string folder = "ezssh")
+    public static string WriteToFile(string path, string content)
     {
         try
         {

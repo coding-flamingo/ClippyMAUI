@@ -17,6 +17,7 @@ namespace ExistingBlazorSite.Server.Controllers
                 "I love .NET MAUI!",
                 "I am an everything developer now",
                 "Clippy should still be a thing!",
+                "Hello MAUI Fest!",
             };
         }
 

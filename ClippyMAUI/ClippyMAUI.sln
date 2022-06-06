@@ -12,6 +12,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExistingBlazorSite.Shared",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleRazorLibrary", "..\SampleRazorLibrary\SampleRazorLibrary.csproj", "{166C51BA-71A5-46FF-93BE-B316A34D0C5A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientLibrary", "..\ClientLibrary\ClientLibrary.csproj", "{1EC91C7F-4B85-4138-8154-D7A827AF2FB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleConsoleApp", "..\SampleConsoleApp\SampleConsoleApp.csproj", "{695C8ED2-72D5-485E-8FDF-B6E719B96CFB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +44,14 @@ Global
 		{166C51BA-71A5-46FF-93BE-B316A34D0C5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{166C51BA-71A5-46FF-93BE-B316A34D0C5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{166C51BA-71A5-46FF-93BE-B316A34D0C5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EC91C7F-4B85-4138-8154-D7A827AF2FB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EC91C7F-4B85-4138-8154-D7A827AF2FB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EC91C7F-4B85-4138-8154-D7A827AF2FB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EC91C7F-4B85-4138-8154-D7A827AF2FB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{695C8ED2-72D5-485E-8FDF-B6E719B96CFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{695C8ED2-72D5-485E-8FDF-B6E719B96CFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{695C8ED2-72D5-485E-8FDF-B6E719B96CFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{695C8ED2-72D5-485E-8FDF-B6E719B96CFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
