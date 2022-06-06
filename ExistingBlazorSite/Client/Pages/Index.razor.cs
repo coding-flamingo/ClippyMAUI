@@ -7,6 +7,7 @@ namespace ExistingBlazorSite.Client.Pages
         [Inject]
         HttpClient _httpClient { get; set; }
         private string? _magicalQuote;
+
         protected override async Task OnInitializedAsync()
         {
             await GetStringFromServerAsync();
