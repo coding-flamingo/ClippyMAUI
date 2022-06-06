@@ -1,0 +1,21 @@
+﻿<div class="card mb-3" style="border-radius: 10px;">
+    <div class="card-header" style="background-color: transparent;">
+        <div class="row">
+            <div class="col-sm-12 col-lg-6 col-md-6" style="margin-top: 4px;border: 0px !important;padding-right:5px;">
+               <h4 style="display:inline;line-height: 1.5;">
+                        Get Your Lucky Quote From The Magical Server!
+                    </h4>
+            </div>
+
+            <div class="col-sm-12 col-lg-6 col-md-6" style="margin-top: 4px;border: 0px !important;padding-right:5px;">
+                <button @onclick="GetNewQuoteAsync"
+                        class="btn btn-primary float-right">
+                    Get Quote
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <h4>@MessageToDisplay</h4>
+    </div>
+</div>
