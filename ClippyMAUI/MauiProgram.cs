@@ -18,6 +18,8 @@ public static class MauiProgram
 			});
         builder.Services.AddMauiBlazorWebView();
         builder.Services.AddSingleton<WeatherForecastService>();
+        builder.Services.AddTransient<HttpClient>();
+        builder.Services.AddTransient<HTTPClientService>();
 		builder.Services.AddScoped<ClippyService>();
 		builder.Services.AddSingleton<HttpClient>();
 		builder.Services.AddSingleton<HTTPClientService>();

@@ -62,7 +62,15 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Compile Remove="Pages\Counter.razor.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<Content Remove="Properties\launchSettings.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="Pages\Counter.razor.cs" />
 	</ItemGroup>
 
 	<ItemGroup>
