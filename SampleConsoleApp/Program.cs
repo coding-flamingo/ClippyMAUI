@@ -12,7 +12,8 @@ APIResultModel aPIResultModel = await
 if(aPIResultModel.Success)
 {
     Console.WriteLine(aPIResultModel.Message);
-    FileService.WriteToFile("sample.txt", aPIResultModel.Message);
+    string path = FileService.WriteToFile("sample.txt", aPIResultModel.Message);
+    Console.WriteLine($"Wrote file to {path}");
 }
 else
 {

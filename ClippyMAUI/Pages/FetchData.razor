@@ -1,46 +1,36 @@
 ﻿@page "/fetchdata"
 
+@using ClientLibrary.Models
+@using ClientLibrary.Services
 @using ClippyMAUI.Data
-@inject WeatherForecastService ForecastService
+@using SampleRazorLibrary
+@inject HTTPClientService _httpService
 
-<h1>Weather forecast</h1>
+<h1>Magical Site</h1>
+    <LuckyCardComponent GetNewQuote="GetMessageAsync" MessageToDisplay="@_message"></LuckyCardComponent>    
 
-<p>This component demonstrates fetching data from a service.</p>
 
-@if (forecasts == null)
-{
-	<p><em>Loading...</em></p>
-}
-else
-{
-	<table class="table">
-		<thead>
-			<tr>
-				<th>Date</th>
-				<th>Temp. (C)</th>
-				<th>Temp. (F)</th>
-				<th>Summary</th>
-			</tr>
-		</thead>
-		<tbody>
-			@foreach (var forecast in forecasts)
-			{
-				<tr>
-					<td>@forecast.Date.ToShortDateString()</td>
-					<td>@forecast.TemperatureC</td>
-					<td>@forecast.TemperatureF</td>
-					<td>@forecast.Summary</td>
-				</tr>
-			}
-		</tbody>
-	</table>
-}
 
 @code {
-	private WeatherForecast[] forecasts;
+	private string _message;
 
-	protected override async Task OnInitializedAsync()
+	protected override void OnInitialized()
 	{
-		forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
+		_message = "Hello MAUI Fest";
+	}
+
+	private async Task GetMessageAsync(bool randy = false)
+	{
+		APIResultModel aPIResultModel = await 
+		_httpService.CallGenericAsync(AppConstants.HOMESITE
+			+ "/api/Clippy", "", "", HttpMethod.Get);
+		if(aPIResultModel.Success)
+		{
+			_message = aPIResultModel.Message;
+		}
+		else
+		{
+			_message = "Error contacting server";
+		}
 	}
 }
