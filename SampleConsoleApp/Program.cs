@@ -12,7 +12,7 @@ APIResultModel aPIResultModel = await
 if(aPIResultModel.Success)
 {
     Console.WriteLine(aPIResultModel.Message);
-    FileService.WriteToFile("sample.txt", aPIResultModel.Message);
+    FileService.WriteToFile( "sample.txt", aPIResultModel.Message);
 }
 else
 {

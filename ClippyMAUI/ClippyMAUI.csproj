@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Razor">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
 	<PropertyGroup>
 		<TargetFrameworks>net6.0-android;net6.0-ios;net6.0-maccatalyst</TargetFrameworks>
@@ -62,13 +62,26 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Compile Remove="Pages\Counter.razor.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<Content Remove="Properties\launchSettings.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="Pages\Counter.razor.cs" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <PackageReference Include="BlazorClippy" Version="0.1.0" />
 	  <PackageReference Include="Microsoft.Graphics.Win2D" Version="1.0.3.1" />
 	  <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.1.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\ClientLibrary\ClientLibrary.csproj" />
+	  <ProjectReference Include="..\SampleRazorLibrary\SampleRazorLibrary.csproj" />
 	</ItemGroup>
 
 </Project>
