@@ -52,7 +52,7 @@
 
 	<ItemGroup Condition="$(TargetFramework.Contains('-windows'))">
 		<!-- Required - WinUI does not yet have buildTransitive for everything -->
-		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.3" />
+		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.1.0" />
 		<PackageReference Include="Microsoft.Graphics.Win2D" Version="1.0.3.1" />
 	</ItemGroup>
 
@@ -77,11 +77,18 @@
 	  <PackageReference Include="BlazorClippy" Version="0.1.0" />
 	  <PackageReference Include="Microsoft.Graphics.Win2D" Version="1.0.3.1" />
 	  <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.1.0" />
+	  <PackageReference Include="PInvoke.User32" Version="0.7.124" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <ProjectReference Include="..\ClientLibrary\ClientLibrary.csproj" />
 	  <ProjectReference Include="..\SampleRazorLibrary\SampleRazorLibrary.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="Platforms\Windows\trayicon.ico">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
 	</ItemGroup>
 
 </Project>
